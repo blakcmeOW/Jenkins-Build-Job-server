@@ -9,7 +9,7 @@
 > [!IMPORTANT]
 > *Before anything else, there are pre-requisite tools need to set-up before writing up a Jenkinsfile pipeline*
 
-- Jenkins Server (Either creating server via HRS AWS Account or WSL2) 
+- Jenkins Server (Either creating server via AWS Account or WSL2) 
 - Github PAT
 - AWS Access and Secret Key
 
