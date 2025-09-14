@@ -43,3 +43,20 @@
 
 > [!CAUTION]
 > *The secret key will only appeared once it was generated. Keep in mind that it must be copy moving on to next step.*
+
+
+### Datadog Agent set-up (Web/App server)
+1. Go to Agent tab, under Host-based, select your OS you preferred.
+2. In setting-up for Ubuntu server, either "Generate" (applicable only if you don't have one) or "Select" API key (applicable for existing API key).
+3. Run this command below on our Web/App server:
+```
+DD_API_KEY=<DATADOG_API_KEY> \
+DD_SITE="datadoghq.com" \ 
+bash -c "$(curl -L https://install.datadoghq.com/scripts/install_script_agent7.sh)"
+```
+4. Run these following command below to verify that Datadog status was running/active.
+```
+sudo systemctl restart datadog-agent
+sudo systemctl status datadog-agent
+```
+5. For configurations, kindly go to datadog.yaml file. You may use locate or find command to identify where it was located. Save and restart the service once the configurations are all applied.
